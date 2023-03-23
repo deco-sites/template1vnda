@@ -53,7 +53,7 @@ export default function Footer({ navItems, newsletter, instagram, facebook, stor
               </div>
             </div>
           </div>
-          <div class="flex flex-col opacity-[0.7] py-8 md:flex-row md:justify-between">
+          <div class="flex flex-col gap-2 opacity-[0.7] py-8 md:flex-row md:justify-between">
             <p class="font-roboto text-base text-white text-center">{store}</p>
             <a href="" class="font-roboto text-base text-white text-center underline">{link}</a>
           </div>
