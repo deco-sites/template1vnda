@@ -28,10 +28,10 @@ function ProductShelf({
   return (
     <Container
       id={id}
-      class="grid grid-cols-[48px_1fr_48px] grid-rows-[48px_1fr_48px_1fr] py-10 px-0 sm:px-5"
+      class="grid grid-cols-[48px_1fr_48px] grid-rows-[48px_1fr_48px_1fr] py-10 max-w-[calc(1440px + 10%)] px-[5%] md:min-w-[992px]"
     >
-      <h2 class="text-center row-start-1 col-span-full">
-        <Text variant="heading-2">{title}</Text>
+      <h2 class="row-start-1 col-span-full">
+        <div class="text-3xl font-berkshire font-normal">{title}</div>
       </h2>
 
       <Slider

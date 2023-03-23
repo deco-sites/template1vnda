@@ -19,7 +19,7 @@ function Sizes(product: Product) {
   );
 
   return (
-    <ul class="flex justify-center items-center gap-2">
+    <ul class="flex items-center gap-2">
       {options.map(([url, value]) => (
         <a href={url}>
           <Avatar
@@ -54,10 +54,10 @@ function ProductCard({ product, preload }: Props) {
   return (
     <div
       id={`product-card-${productID}`}
-      class="w-full group"
+      class="relative w-full group"
     >
       <a href={url} aria-label="product link">
-        <div class="relative w-full">
+        <div class="w-full">
           <Image
             src={front.url!}
             alt={front.alternateName}
@@ -77,37 +77,32 @@ function ProductCard({ product, preload }: Props) {
             sizes="(max-width: 640px) 50vw, 20vw"
           />
           {seller && (
-            <div
-              class="absolute bottom-0 hidden sm:group-hover:flex flex-col gap-2 w-full p-2 bg-opacity-10"
-              style={{
-                backgroundColor: "rgba(255, 255, 255, 0.2)",
-                backdropFilter: "blur(2px)",
-              }}
-            >
-              <Sizes {...product} />
-              <Button as="a" href={product.url}>Visualizar Produto</Button>
+            <div class="absolute bottom-0 hidden sm:group-hover:flex w-full">
+              <div
+                class="relative sm:group-hover:flex flex-col gap-2 w-full p-4 bg-opacity-10 border rounded-t"
+                style={{
+                  backgroundColor: "rgba(255, 255, 255, 1)",
+                }}
+              >
+                <div>
+                  <a href={product.url} class="absolute border p-1 uppercase text-xs font-roboto right-4 top-2">+ detalhes</a>
+                </div>
+                <div class="text-[#0a0b0c] font-roboto font-semibold text-sm">
+                  Tamanho
+                </div>
+                <Sizes {...product} />
+                <Button as="a" href={product.url}>ADICIONAR AO CARRINHO</Button>
+              </div>
             </div>
           )}
         </div>
 
         <div class="flex flex-col gap-1 py-2">
-          <Text
-            class="overflow-hidden overflow-ellipsis whitespace-nowrap"
-            variant="caption"
-          >
+          <div class="font-roboto font-bold text-xl text-center">
             {name}
-          </Text>
-          <div class="flex items-center gap-2">
-            <Text
-              class="line-through"
-              variant="list-price"
-              tone="subdued"
-            >
-              {formatPrice(listPrice, offers!.priceCurrency!)}
-            </Text>
-            <Text variant="caption" tone="price">
-              {formatPrice(price, offers!.priceCurrency!)}
-            </Text>
+          </div>
+          <div class="font-roboto font-bold text-xl text-center">
+            {formatPrice(price, offers!.priceCurrency!)}
           </div>
         </div>
       </a>
