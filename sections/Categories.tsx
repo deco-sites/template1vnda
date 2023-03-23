@@ -15,7 +15,7 @@ export interface Props {
 export default function Categories({ categories }: Props) {
   return (
     <section>
-        <div class="grid gap-8 my-24 mx-auto max-w-[calc(1440px + 10%)] px-[5%] w-full md:grid-cols-3 md:min-w-[992px]">
+        <div class="grid gap-8 my-24 mx-auto max-w-[calc(1440px + 10%)] px-[5%] w-full md:grid-cols-3">
             {categories.map((category) => {
                 return (
                     <div class="relative">

@@ -9,7 +9,7 @@ export interface Props {
 export default function Instagram({ name, text, images }: Props) {
   return (
     <section>
-        <div class="flex flex-col md:min-w-[992px]">
+        <div class="flex flex-col">
             <a href={'https://instagram.com/'+name} class="block mb-4 text-center text-3xl font-berkshire font-normal">@{name}</a>
             <p class="block mb-4 text-center font-roboto text-base">{text}</p>
             <div class="grid grid-cols-3 md:grid-cols-6">

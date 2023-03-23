@@ -16,7 +16,7 @@ export interface Props {
 export default function FixedBanner({ banners }: Props) {
   return (
     <section>
-        <div class="flex flex-col mb-24 mx-auto max-w-[calc(1440px + 10%)] px-[5%] md:min-w-[992px] gap-10 md:gap-24">
+        <div class="flex flex-col mb-24 mx-auto max-w-[calc(1440px + 10%)] px-[5%] gap-10 md:gap-24">
             {banners.map((banner) => {
                 return (
                     <div class={banner.imagePosition === 'left' ? "md:flex md:items-center" : "md:flex md:items-center flex-row-reverse"}>
