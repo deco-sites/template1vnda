@@ -47,10 +47,10 @@ function Navbar({ items, searchbar }: {
             </a>
           </div>
           <div class="flex justify-self-end">
-            <a href="/entrar" aria-label="Store logo" class="px-4 py-3 font-roboto text-base">
+            <a href="/entrar" aria-label="Store logo" class="px-4 py-3 font-roboto text-sm font-semibold">
               MINHA CONTA
             </a>
-            <div class="px-4 py-3 font-roboto text-base">
+            <div class="px-4 py-3 font-roboto text-sm font-semibold">
               MINHA SACOLA
             </div>
             <HeaderButton variant="cart" />
