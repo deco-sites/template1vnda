@@ -79,7 +79,7 @@ function ProductCard({ product, preload }: Props) {
           {seller && (
             <div class="absolute bottom-0 hidden sm:group-hover:flex w-full">
               <div
-                class="relative sm:group-hover:flex flex-col gap-2 w-full p-4 bg-opacity-10 border rounded-t"
+                class="relative sm:group-hover:flex flex-col gap-4 w-full p-4 bg-opacity-10 border rounded-t"
                 style={{
                   backgroundColor: "rgba(255, 255, 255, 1)",
                 }}
@@ -106,6 +106,25 @@ function ProductCard({ product, preload }: Props) {
           </div>
         </div>
       </a>
+      {seller && (
+            <div class="flex w-full sm:hidden">
+              <div
+                class="relative flex flex-col gap-4 w-full p-4"
+                style={{
+                  backgroundColor: "rgba(255, 255, 255, 1)",
+                }}
+              >
+                <div class="text-[#0a0b0c] font-roboto font-semibold text-sm">
+                  Tamanho
+                </div>
+                <Sizes {...product} />
+                <div class="grid grid-cols-2 gap-2">
+                  <a href={product.url} class="border p-1 uppercase text-xs font-roboto text-center text-[#0a0b0c] border-[#0a0b0c] flex items-center justify-center"><p>+ detalhes</p></a>
+                  <a href={product.url} class="block border p-1 uppercase text-xs font-roboto text-center text-[#0a0b0c] border-[#0a0b0c]">adicionar ao carrinho</a>
+                </div>
+              </div>
+            </div>
+          )}
     </div>
   );
 }
