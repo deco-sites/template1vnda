@@ -35,29 +35,31 @@ function Navbar({ items, searchbar }: {
 
       {/* Desktop Version */}
       
-      <div class="flex flex-col mx-auto max-w-[1440px]">
-        <div class="hidden md:grid grid-cols-3 items-center w-full pl-2 pr-3">
-          <div>
-            <HeaderButton variant="search" />
-            <HeaderSearchMenu searchbar={searchbar} />
-          </div>
-          <div class="justify-self-center">
-            <a href="/" aria-label="Store logo" class="px-4 py-3">
-              <Icon id="Logo" width={126} height={16} />
-            </a>
-          </div>
-          <div class="flex justify-self-end">
-            <a href="/entrar" aria-label="Store logo" class="px-4 py-3 font-roboto text-sm font-semibold">
-              MINHA CONTA
-            </a>
-            <div class="px-4 py-3 font-roboto text-sm font-semibold">
-              MINHA SACOLA
+      <div class="border-b-1 border-default">
+          <div class="flex flex-col mx-auto max-w-[1440px]">
+          <div class="hidden md:grid grid-cols-3 items-center w-full pl-2 pr-3">
+            <div>
+              <HeaderButton variant="search" />
+              <HeaderSearchMenu searchbar={searchbar} />
             </div>
-            <HeaderButton variant="cart" />
+            <div class="justify-self-center">
+              <a href="/" aria-label="Store logo" class="px-4 py-3">
+                <Icon id="Logo" width={126} height={16} />
+              </a>
+            </div>
+            <div class="flex justify-self-end">
+              <a href="/entrar" aria-label="Store logo" class="px-4 py-3 font-roboto text-sm font-semibold">
+                MINHA CONTA
+              </a>
+              <div class="px-4 py-3 font-roboto text-sm font-semibold">
+                MINHA SACOLA
+              </div>
+              <HeaderButton variant="cart" />
+            </div>
           </div>
-        </div>
-        <div class="hidden md:flex flex-row justify-center items-center w-full pl-2 pr-3">
-          {items.map((item) => <NavItem item={item} />)}
+          <div class="hidden md:flex flex-row justify-center items-center w-full pl-2 pr-3">
+            {items.map((item) => <NavItem item={item} />)}
+          </div>
         </div>
       </div>
     </>
