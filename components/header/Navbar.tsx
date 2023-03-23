@@ -34,27 +34,30 @@ function Navbar({ items, searchbar }: {
       </div>
 
       {/* Desktop Version */}
-      <div class="hidden md:flex flex-row justify-between items-center border-b-1 border-default w-full pl-2 pr-3">
-        <div class="flex-none w-44">
-          <a href="/" aria-label="Store logo" class="block px-4 py-3 w-[160px]">
-            <Icon id="Logo" width={126} height={16} />
-          </a>
+      
+      <div class="flex flex-col">
+        <div class="hidden md:grid grid-cols-3 items-center w-full pl-2 pr-3">
+          <div>
+            <HeaderButton variant="search" />
+            <HeaderSearchMenu searchbar={searchbar} />
+          </div>
+          <div class="justify-self-center">
+            <a href="/" aria-label="Store logo" class="px-4 py-3">
+              <Icon id="Logo" width={126} height={16} />
+            </a>
+          </div>
+          <div class="flex justify-self-end">
+            <a href="/" aria-label="Store logo" class="px-4 py-3">
+              MINHA CONTA
+            </a>
+            <a href="/" aria-label="Store logo" class="px-4 py-3">
+              MINHA SACOLA
+            </a>
+            <HeaderButton variant="cart" />
+          </div>
         </div>
-        <div class="flex-auto flex justify-center">
+        <div class="hidden md:flex flex-row justify-center items-center border-b-1 border-default w-full pl-2 pr-3">
           {items.map((item) => <NavItem item={item} />)}
-        </div>
-        <div class="flex-none w-44 flex items-center justify-end gap-2">
-          <HeaderButton variant="search" />
-          <HeaderSearchMenu searchbar={searchbar} />
-          <Button
-            as="a"
-            variant="icon"
-            href="/login"
-            aria-label="Log in"
-          >
-            <Icon id="User" width={20} height={20} strokeWidth={0.4} />
-          </Button>
-          <HeaderButton variant="cart" />
         </div>
       </div>
     </>
