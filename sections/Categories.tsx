@@ -15,7 +15,7 @@ export interface Props {
 export default function Categories({ categories }: Props) {
   return (
     <section>
-        <div class="grid gap-8 mb-24 mx-auto max-w-[calc(1440px + 10%)] px-[5%] w-full">
+        <div class="grid gap-8 my-24 mx-auto max-w-[calc(1440px + 10%)] px-[5%] w-full md:grid-cols-3 md:min-w-[992px]">
             {categories.map((category) => {
                 return (
                     <div class="relative">
@@ -23,11 +23,11 @@ export default function Categories({ categories }: Props) {
                             <img src={category.image} alt="" />
                         </a>
                         <div class="absolute flex flex-col py-8 px-[10%] bottom-0 left-0">
-                            <p class="mb-4 text-[3.2rem] font-berkshire font-normal">{category.name}</p>
-                            <p>{category.text}</p>
-                            <div class="flex">
-                                <a class="relative uppercase" href={category.url}>{category.call}
-                                    <div class="absolute h-[2px] w-1/2 bg-base hover:w-full"></div>
+                            <p class="mb-4 text-3xl font-berkshire font-normal text-center">{category.name}</p>
+                            <p class="mb-4 font-roboto text-base text-center">{category.text}</p>
+                            <div class="flex justify-center">
+                                <a class="relative uppercase font-roboto text-base text-center group" href={category.url}>{category.call}
+                                    <div class="absolute h-[2px] w-1/2 bg-base group-hover:w-full transition-[width] ease-in duration-500"></div>
                                 </a>
                             </div>
                         </div>
