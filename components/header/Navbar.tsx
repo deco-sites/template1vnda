@@ -35,7 +35,7 @@ function Navbar({ items, searchbar }: {
 
       {/* Desktop Version */}
       
-      <div class="flex flex-col">
+      <div class="flex flex-col mx-auto max-w-[1440px]">
         <div class="hidden md:grid grid-cols-3 items-center w-full pl-2 pr-3">
           <div>
             <HeaderButton variant="search" />
