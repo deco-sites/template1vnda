@@ -3,7 +3,7 @@ export default function Login() {
     <section>
         <div class="mt-24 md:mt-44"></div>
         <p class="text-center text-3xl font-berkshire font-normal">Conecte-se aqui</p>
-        <div class="grid gap-8 mx-auto max-w-[calc(1440px + 10%)] px-[5%] w-full md:grid-cols-2 pt-12 pb-32">
+        <div class="grid gap-8 mx-auto max-w-[1440px] px-[5%] w-full md:grid-cols-2 pt-12 pb-32">
             <div class="px-10 flex flex-col gap-4">
                 <p class="font-roboto text-2xl font-bold">Já tem uma conta?</p>
                 <p class="font-roboto text-lg">Clique no botão abaixo e faça o login para acessar sua conta.</p>

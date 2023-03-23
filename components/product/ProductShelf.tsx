@@ -28,7 +28,7 @@ function ProductShelf({
   return (
     <Container
       id={id}
-      class="grid grid-cols-[48px_1fr_48px] grid-rows-[48px_1fr_48px_1fr] py-10 max-w-[calc(1440px + 10%)] px-[5%]"
+      class="grid grid-cols-[48px_1fr_48px] grid-rows-[48px_1fr_48px_1fr] py-10 max-w-[1440px] px-[5%]"
     >
       <h2 class="row-start-1 col-span-full">
         <div class="text-3xl font-berkshire font-normal">{title}</div>

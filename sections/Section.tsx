@@ -13,20 +13,19 @@ export interface Props {
     banners: Banner[];
   }
 
-export default function FixedBanner({ banners }: Props) {
+export default function Section({ banners }: Props) {
   return (
     <section>
         <div class="flex flex-col mb-24 mx-auto max-w-[1440px] px-[5%] gap-10 md:gap-24">
             {banners.map((banner) => {
                 return (
                     <div class={banner.imagePosition === 'left' ? "md:flex md:items-center" : "md:flex md:items-center flex-row-reverse"}>
-                        <img src={banner.image} class="md:w-[60%]" alt="" />
+                        <img src={banner.image} class="md:w-[50%]" alt="" />
                         <div class="flex flex-col mt-8 md:px-[5%]">
                             <p class="mb-4 text-3xl font-berkshire font-normal">{banner.name}</p>
                             <p class="mb-4 font-roboto text-base">{banner.text}</p>
                             <div class="flex">
                                 <a class="relative uppercase font-roboto text-base group" href={banner.url}>{banner.call}
-                                    <div class="absolute h-[2px] w-1/2 bg-base group-hover:w-full transition-[width] ease-in duration-500"></div>
                                 </a>
                             </div>
                         </div>

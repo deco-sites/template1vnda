@@ -21,7 +21,7 @@ export interface Props {
 export default function Footer({ navItems, newsletter, instagram, facebook, store, link }: Props) {
   return (
     <section class="bg-black">
-        <div class="flex flex-col mx-auto max-w-[calc(1440px + 10%)] px-[5%]">
+        <div class="flex flex-col mx-auto max-w-[1440px] px-[5%]">
           <div class="grid grid-cols-2 mt-12 md:grid-cols-none md:flex md:justify-between">
             {navItems.map((navItem) => {
               return (
