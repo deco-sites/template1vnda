@@ -42,6 +42,7 @@ const options: Omit<Options, "selfURL"> = {
         "interactive-inverse": "#FFFFFF",
         "hover": "rgba(0, 0, 0, 0.04)",
         "hover-inverse": "rgba(255, 255, 255, 0.4)",
+        "base": "#0a0b0c",
       },
       textColor: {
         "default": "#161616",
@@ -113,6 +114,7 @@ const options: Omit<Options, "selfURL"> = {
     fontFamily: {
       sans: ["Albert Sans", "sans-serif"],
       serif: ["inherit", "serif"],
+      berkshire: ["Berkshire Swash", "cursive"],
     },
     screens: {
       sm: "640px",

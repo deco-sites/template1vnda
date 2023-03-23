@@ -2,9 +2,10 @@ import Text from "$store/components/ui/Text.tsx";
 import SliderControllerJS from "$store/islands/SliderJS.tsx";
 import Slider from "$store/components/ui/Slider.tsx";
 import { useId } from "preact/hooks";
+import type { HTML } from "deco-sites/std/components/types.ts";
 
 export interface Props {
-  alerts: string[];
+  alerts: HTML[];
   /**
    * @title Autoplay interval
    * @description time (in seconds) to start the carousel autoplay
@@ -17,15 +18,12 @@ function Alert({ alerts = [], interval = 5 }: Props) {
 
   return (
     <div id={id}>
-      <Slider class="bg-badge gap-6 scrollbar-none">
+      <Slider class="bg-base gap-6 scrollbar-none">
         {alerts.map((alert) => (
-          <Text
-            class="flex justify-center items-center w-screen h-[38px]"
-            variant="caption"
-            tone="default-inverse"
-          >
-            {alert}
-          </Text>
+          <>
+            <div class="flex justify-center items-center w-screen h-[30px] text-default-inverse" dangerouslySetInnerHTML={{ __html: alert }}>
+            </div>
+          </>
         ))}
       </Slider>
 
