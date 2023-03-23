@@ -56,7 +56,7 @@ function Navbar({ items, searchbar }: {
             <HeaderButton variant="cart" />
           </div>
         </div>
-        <div class="hidden md:flex flex-row justify-center items-center border-b-1 border-default w-full pl-2 pr-3">
+        <div class="hidden md:flex flex-row justify-center items-center w-full pl-2 pr-3">
           {items.map((item) => <NavItem item={item} />)}
         </div>
       </div>
