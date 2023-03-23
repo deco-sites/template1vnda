@@ -50,9 +50,9 @@ function Navbar({ items, searchbar }: {
             <a href="/" aria-label="Store logo" class="px-4 py-3 font-roboto text-base">
               MINHA CONTA
             </a>
-            <a href="/" aria-label="Store logo" class="px-4 py-3 font-roboto text-base">
+            <div class="px-4 py-3 font-roboto text-base">
               MINHA SACOLA
-            </a>
+            </div>
             <HeaderButton variant="cart" />
           </div>
         </div>
