@@ -47,7 +47,7 @@ function Navbar({ items, searchbar }: {
             </a>
           </div>
           <div class="flex justify-self-end">
-            <a href="/" aria-label="Store logo" class="px-4 py-3 font-roboto text-base">
+            <a href="/entrar" aria-label="Store logo" class="px-4 py-3 font-roboto text-base">
               MINHA CONTA
             </a>
             <div class="px-4 py-3 font-roboto text-base">
